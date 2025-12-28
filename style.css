@@ -1,0 +1,191 @@
+/* --- БАЗОВЫЙ СТИЛЬ --- */
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    line-height: 1.6;
+    background: #f0f2f5;
+    margin: 0;
+    padding: 0;
+    color: #222;
+    
+}
+
+/* Ограничение ширины и выравнивание */
+.container {
+    max-width: 1200px;
+    padding: 20px;
+    margin: auto;
+}
+
+/* --- ШАПКА --- */
+header {
+    background: #1a365d;
+    color: #fff;
+    padding: 20px 0;
+    border-bottom: 4px solid #3c6eb4;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 32px;
+    margin: 0;
+}
+
+nav {
+    text-align: center;
+    margin-top: 10px;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #cfe2ff;
+}
+
+nav a:hover {
+    color: #ffffff;
+}
+
+/* --- РАЗДЕЛЫ --- */
+h2 {
+    color: #1a365d;
+    border-left: 6px solid #3c6eb4;
+    padding-left: 10px;
+    margin-top: 40px;
+}
+
+h3 {
+    margin-top: 25px;
+    color: #2d4a72;
+}
+
+/* --- СХЕМЫ ДВИГАТЕЛЕЙ --- */
+.engine-scheme img,
+.takt img {
+    max-width: 100%;
+    display: block;
+    margin: 15px auto;
+    border: 2px solid #3c6eb4;
+    background: white;
+    border-radius: 6px;
+}
+
+.img-caption {
+    text-align: center;
+    font-size: 14px;
+    color: #444;
+}
+
+/* --- СПИСОК ДЕТАЛЕЙ --- */
+.parts-list {
+    max-width: 500px;
+    margin: 10px auto 25px;
+    background: #ffffff;
+    padding: 15px;
+    border-left: 4px solid #3c6eb4;
+    border-radius: 6px;
+}
+
+/* --- БЛОКИ ТАКТОВ --- */
+/* Контейнер такта */
+.takt {
+    margin-bottom: 40px;
+    padding: 25px;
+    background: #f8f9fa;
+    border-radius: 10px;
+   
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+/* Заголовок такта (отдельная строка) */
+.takt h4 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #2c3e50;
+    font-size: 1.5em;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+/* Контейнер для картинки и описания */
+.takt-content {
+    display: flex;               /* Flexbox для горизонтального расположения */
+    align-items: flex-start;     /* Выравнивание по верху */
+    gap: 30px;                   /* Расстояние между картинкой и текстом */
+}
+
+/* Стили для картинки */
+.takt-content img {
+    width: 500px;                /* Фиксированная ширина */
+    height: auto;                /* Сохраняем пропорции */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    flex-shrink: 0;              /* Не даем картинке сжиматься */
+}
+
+/* Контейнер для описания */
+.takt-description {
+    flex: 1;                     /* Занимает все оставшееся пространство */
+}
+
+/* Текст описания */
+.takt-description p {
+    line-height: 1.6;
+    color: #444;
+    font-size: 1.1em;
+    margin: 0;
+}
+
+/* Адаптивность для мобильных */
+@media (max-width: 768px) {
+    .takt-content {
+        flex-direction: column;  /* На мобильных - вертикально */
+        gap: 20px;
+    }
+    
+    .takt-content img {
+        width: 100%;             /* Картинка на всю ширину */
+        max-width: 400px;        /* Но не больше 400px */
+        margin: 0 auto;          /* Центрируем */
+    }
+    
+    .takt-description {
+        text-align: center;      /* Центрируем текст на мобильных */
+    }
+}
+
+/* Дополнительные стили для улучшения */
+.takt {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.takt:hover {
+    /*transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);*/
+}
+
+/* Можно добавить иконку перед заголовком */
+.takt h4::before {
+    content: "⚙️ ";
+    margin-right: 10px;
+}
+/*.takt {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 25px 0;
+    border: 1px solid #c7d4e7;
+}*/
+
+.takt h4 {
+    color: #1a365d;
+    margin-top: 0;
+}
+
+/* --- ПОДВАЛ --- */
+footer {
+    text-align: center;
+    margin: 40px 0 20px;
+    font-size: 14px;
+    color: #666;
+}
